@@ -1,0 +1,32 @@
+{
+  "job_id": "uuid",
+  "uploaded_by": "email_or_id",
+  "status": "complete",
+  "summary": {
+    "score": 72,
+    "verdict": "suspicious",
+    "highest_severity": "high"
+  },
+  "findings": [
+    {
+      "id": "F001",
+      "severity": "high",
+      "title": "Binary executable found",
+      "description": "Found file 'bin/evil.exe' (PE). Executables may contain malware.",
+      "evidence": ["bin/evil.exe", "sha256:..."]
+    },
+    {
+      "id": "F002",
+      "severity": "medium",
+      "title": "Base64-encoded payload",
+      "description": "Large base64 block found in util/loader.js",
+      "evidence": ["util/loader.js: lines 120-170"]
+    }
+  ],
+  "artifacts": {
+    "file_list": [...],
+    "hashes": {...},
+    "container_log": "..."
+  },
+  "created_at": "2025-10-16T..."
+}
